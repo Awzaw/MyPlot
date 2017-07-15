@@ -85,7 +85,7 @@ class Commands extends PluginCommand
         }
     }
 
-    public function execute(CommandSender $sender, $alias, array $args) {
+    public function execute(CommandSender $sender, string $alias, array $args) : bool{
         if (!isset($args[0])) {
             $sender->sendMessage($this->plugin->getLanguage()->get("command.usage"));
             return true;
