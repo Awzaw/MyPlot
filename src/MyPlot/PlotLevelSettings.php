@@ -18,8 +18,8 @@ class PlotLevelSettings
     public function __construct($name, $settings = []) {
         $this->name = $name;
         if (!empty($settings)) {
-            $this->roadBlock = self::parseBlock($settings, "RoadBlock", new Block(Block::PLANK));
-            $this->wallBlock = self::parseBlock($settings, "WallBlock", new Block(Block::SLABS));
+            $this->roadBlock = self::parseBlock($settings, "RoadBlock", new Block(Block::PLANKS));
+            $this->wallBlock = self::parseBlock($settings, "WallBlock", new Block(Block::STONE_SLAB));
             $this->plotFloorBlock = self::parseBlock($settings, "PlotFloorBlock", new Block(Block::GRASS));
             $this->plotFillBlock = self::parseBlock($settings, "PlotFillBlock", new Block(Block::DIRT));
             $this->bottomBlock = self::parseBlock($settings, "BottomBlock", new Block(Block::BEDROCK));
