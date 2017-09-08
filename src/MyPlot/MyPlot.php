@@ -255,7 +255,7 @@ class MyPlot extends PluginBase
             return false;
         }
         foreach($this->getServer()->getLevelByName($plot->levelName)->getEntities() as $entity) {
-            $plotb = $this->getPlotByPosition($entity->getPosition());
+            $plotb = $entity->getPosition() !== null ? $this->getPlotByPosition($entity->getPosition()) : null;
             if($plotb != null) {
                 if($plotb === $plot) {
                     if(!$entity instanceof Player) {

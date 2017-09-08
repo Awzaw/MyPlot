@@ -153,6 +153,9 @@ class EventListener implements Listener
     }
 
     public function onEntityMotion(EntityMotionEvent $event) {
+        if ($event->getEntity()->getLevel() == null) {
+            return;
+        }
         $levelName = $event->getEntity()->getLevel()->getName();
         if (!$this->plugin->isLevelLoaded($levelName))
             return;
