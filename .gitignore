@@ -5,3 +5,5 @@ plots.db
 .idea/
 !/resources/config.yml
 .github/
+.poggit.yml
+icon.png
